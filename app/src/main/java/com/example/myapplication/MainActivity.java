@@ -22,29 +22,51 @@ public class MainActivity extends AppCompatActivity {
         Input2 = (EditText) findViewById(R.id.Input2);
         Output = (TextView) findViewById(R.id.Output);
     }
+    String errorPrinting = "Please put the value";
+
 
     public void addButton(View view) {
-        double n1 = Double.parseDouble(Input1.getText().toString());
-        double n2 = Double.parseDouble(Input2.getText().toString());
-        double sum = n1 + n2;
-        Output.setText(String.valueOf(sum));
+        try {
+            double n1 = Double.parseDouble(Input1.getText().toString());
+            double n2 = Double.parseDouble(Input2.getText().toString());
+            double sum = n1 + n2;
+            Output.setText(String.valueOf(sum));
+        }
+        catch(NumberFormatException e) {
+            Output.setText(String.valueOf(errorPrinting));
+        }
     }
     public void minusButton(View view) {
-        double n1 = Double.parseDouble(Input1.getText().toString());
-        double n2 = Double.parseDouble(Input2.getText().toString());
-        double minus = n1 - n2;
-        Output.setText(String.valueOf(minus));
+        try {
+            double n1 = Double.parseDouble(Input1.getText().toString());
+            double n2 = Double.parseDouble(Input2.getText().toString());
+            double sum = n1 - n2;
+            Output.setText(String.valueOf(sum));
+        }
+        catch(NumberFormatException e) {
+            Output.setText(String.valueOf(errorPrinting));
+        }
     }
     public void multiplyButton(View view) {
-        double n1 = Double.parseDouble(Input1.getText().toString());
-        double n2 = Double.parseDouble(Input2.getText().toString());
-        double multiple = n1 * n2;
-        Output.setText(String.valueOf(multiple));
+        try {
+            double n1 = Double.parseDouble(Input1.getText().toString());
+            double n2 = Double.parseDouble(Input2.getText().toString());
+            double sum = n1 * n2;
+            Output.setText(String.valueOf(sum));
+        }
+        catch(NumberFormatException e) {
+            Output.setText(String.valueOf(errorPrinting));
+        }
     }
     public void divideButton(View view) {
-        double n1 = Double.parseDouble(Input1.getText().toString());
-        double n2 = Double.parseDouble(Input2.getText().toString());
-        double division = n1 / n2;
-        Output.setText(String.valueOf(division));
+        try {
+            double n1 = Double.parseDouble(Input1.getText().toString());
+            double n2 = Double.parseDouble(Input2.getText().toString());
+            double sum = n1 / n2;
+            Output.setText(String.valueOf(sum));
+        }
+        catch(NumberFormatException e) {
+            Output.setText(String.valueOf(errorPrinting));
+        }
     }
 }
